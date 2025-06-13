@@ -87,7 +87,7 @@ function Cart() {
           {cart.map(item => (
             <div key={item.id} className="cart-item">
               <p>{item.title}</p>
-              <p>Price: ${item.price}</p>
+              <p>Price: ₹{item.price}</p>
               <input
                 type="number"
                 min="1"
@@ -97,7 +97,7 @@ function Cart() {
               <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </div>
           ))}
-          <h3>Total: ${total}</h3>
+          <h3>Total: ₹{total}</h3>
           <button onClick={handleCheckout} disabled={loading}>
             {loading ? "Redirecting..." : "Proceed to Checkout"}
           </button>
