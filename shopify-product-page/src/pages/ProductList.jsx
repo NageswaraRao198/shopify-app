@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 
-const SHOPIFY_DOMAIN = "storeofakki.myshopify.com";
-const ACCESS_TOKEN = "e1b45a7ff82218d49e35b0cb2d56390a";
+const SHOPIFY_DOMAIN = "akhilastore.myshopify.com";
+const ACCESS_TOKEN = "7efb7b33fd2b62dab6dbb7db23671d4d";
 
 function ProductList() {
   const [products, setProducts] = useState([]);

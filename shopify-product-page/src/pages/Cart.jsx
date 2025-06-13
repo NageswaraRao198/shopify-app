@@ -1,8 +1,8 @@
 import { useCart } from "../context/CartContext";
 import { useState } from "react";
 
-const SHOPIFY_DOMAIN = "storeofakki.myshopify.com";
-const ACCESS_TOKEN = "e1b45a7ff82218d49e35b0cb2d56390a";
+const SHOPIFY_DOMAIN = "akhilastore.myshopify.com";
+const ACCESS_TOKEN = "7efb7b33fd2b62dab6dbb7db23671d4d";
 
 function Cart() {
   const { cart, updateQuantity, removeFromCart } = useCart();
@@ -87,7 +87,7 @@ function Cart() {
           {cart.map(item => (
             <div key={item.id} className="cart-item">
               <p>{item.title}</p>
-              <p>Price: ₹{item.price}</p>
+              <p>Price: ${item.price}</p>
               <input
                 type="number"
                 min="1"
@@ -97,7 +97,7 @@ function Cart() {
               <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </div>
           ))}
-          <h3>Total: ₹{total}</h3>
+          <h3>Total: ${total}</h3>
           <button onClick={handleCheckout} disabled={loading}>
             {loading ? "Redirecting..." : "Proceed to Checkout"}
           </button>
